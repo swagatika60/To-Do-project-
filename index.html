@@ -1,49 +1,59 @@
-<html lang="en" >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content ="width=device-width", initial-scale="1.0">
-        <meta http-equiv="X-UA-Compatible" content ="ie=edge" >
-            <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/classic/solid/trash" -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="style.css">
-            <title>ToDos</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDos</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="text-center text-light my-4">
+        <h1 class="mb-4">ToDo List</h1>
+        <form class="search">
+          <input
+            class="form-control m-auto"
+            type="text"
+            name="search"
+            placeholder="Search todos..."
+            aria-label="Search todos"
+          />
+        </form>
+      </header>
 
-    </head>
-    <body>
-        <div class ="container">
-            <header class ="text-center text-light my-4">
-                <h1 class="mb-4">ToDo List</h1>
-                <form class="search">
-                    <input class="form-control m-auto" type=""text" name="search" placeholder="search to do">
-                </form>
-            </header>
-             <ul class="list-group todos mx-auto text-light">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <span>play mariokart</span>
-          <span class="delete-btn" style="cursor: pointer;">&#128465;</span>
-           
-                   
-                   
-            </li>
-                
-                
-                <li class ="list-group-item d-flex justify-content-between align-items-center">
-                    <span>defeat ganon in zeldar</span>
-                     <span class="delete-btn" style="cursor: pointer;">&#128465;</span>
-                
-                </li>
-                
-                <li class ="list-group-item d-flex justify-content-between align-items-center">
-                    <span>make a veggie pie</span>
-                    
-                      <span class="delete-btn" style="cursor: pointer;">&#128465;</span> 
-                </li>
-                </ul>
-                    <form class="add text-center my-4">
-                    <label class="text-light">Add  a new todo...</label>
-                    <input class="form-control m-auto" type="text" name ="add" /> 
-                               </form>
-        </div>
-      <script src="app.js"> </script>
-    </body>
+      <p id="task-count" class="text-center text-light small mb-2"></p>
+
+      <ul class="list-group todos mx-auto text-light" aria-live="polite"></ul>
+
+      <div class="text-center my-3">
+        <button
+          type="button"
+          id="clear-completed"
+          class="btn btn-outline-light btn-sm"
+          disabled
+        >
+          Clear completed
+        </button>
+      </div>
+
+      <form class="add text-center my-4">
+        <label class="text-light" for="todo-input">Add a new todo...</label>
+        <input
+          id="todo-input"
+          class="form-control m-auto"
+          type="text"
+          name="add"
+          autocomplete="off"
+        />
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
