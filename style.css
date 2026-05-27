@@ -1,26 +1,42 @@
-body{
-   background-color: rgb(76, 67, 112);
-}
-.contaainer{
-    max-width: 400px
+body {
+  background-color: rgb(76, 67, 112);
 }
 
-input[type=text],
-input[type=text]:focus{
-    color:rgb(216, 222, 227);
-    border: none;
-    background: rgb(119, 98, 202);
-    max-width: 400px;
+.container {
+  max-width: 400px;
 }
-.todos li{
-    background: #07031b;
+
+input[type='text'],
+input[type='text']:focus {
+  color: rgb(216, 222, 227);
+  border: none;
+  background: rgb(119, 98, 202);
+  max-width: 400px;
 }
-.todos li{
-    background: rgb(75, 75, 139);
+
+.todos li {
+  background: rgb(75, 75, 139);
 }
-.delete{
-    cursor: pointer
+
+.todo-label {
+  cursor: pointer;
 }
- .filtered{
-    display: none !important;
-} 
+
+.todo-label span.done {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.delete-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.filtered {
+  display: none !important;
+}
